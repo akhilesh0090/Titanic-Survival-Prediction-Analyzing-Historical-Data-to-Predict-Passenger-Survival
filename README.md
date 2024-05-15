@@ -17,39 +17,35 @@ Hyperparameter tuning is performed on the chosen model to fine-tune its paramete
 
 Finally, the tuned model is applied to the test dataset to make predictions on unseen data. The predicted survival outcomes are then saved for analysis or submission.
 
-Through this project, we aim to gain insights into the factors influencing survival on the Titanic and develop a robust predictive model that can accurately classify passengers based on their likelihood of survival.
 
+Steps:
 
-the important methods/functions used:
-
-Data Loading and Preprocessing:
-
+1. Data Loading and Preprocessing:
 Loaded the training and test datasets from CSV files using pd.read_csv().
 Performed basic exploration using train.head() to understand the structure of the data.
-Data Visualization and Exploratory Data Analysis (EDA):
-
+Data Visualization and Exploratory
+2. Data Analysis (EDA):
 Utilized sns.barplot() to visualize the relationship between survival and categorical variables like 'Sex' and 'Pclass'.
 Identified patterns and insights from visualizations to understand the impact of different features on survival rates.
-Feature Engineering:
-
+3. Feature Engineering:
 Created a new feature 'AgeGroup' by categorizing ages into different groups using pd.cut() based on predefined bins and labels.
 Extracted titles from the 'Name' column using regex and created a new feature 'Title'.
 Simplified titles by grouping rare titles into broader categories using regex substitutions.
 Encoded categorical features using LabelEncoder() from scikit-learn, transforming features like 'Sex', 'AgeGroup', and 'Embarked' into numerical values.
-Model Training and Evaluation:
-
+4. Model Training and Evaluation:
 Split the dataset into features (X) and target (y).
 Further split the data into training and validation sets using train_test_split() from scikit-learn.
 Trained multiple models (Random Forest Classifier and Logistic Regression) using their respective scikit-learn implementations.
 Evaluated model performance using accuracy score (accuracy_score() from scikit-learn) on the validation set.
 Selected the best performing model based on accuracy.
-Hyperparameter Tuning:
-
+5. Hyperparameter Tuning:
 Defined hyperparameter grids for each model to search over during tuning.
 Used GridSearchCV from scikit-learn to perform grid search cross-validation for hyperparameter tuning.
 Tuned hyperparameters to optimize model performance using the best performing model selected earlier.
-Final Model Validation:
-
+6. Final Model Validation:
 Applied the best performing model (after hyperparameter tuning) on the test set to make predictions.
 Generated predictions for the test set using the final model.
 Optionally saved the predictions to a CSV file for further analysis or submission.
+
+
+Through this project, we aim to gain insights into the factors influencing survival on the Titanic and develop a robust predictive model that can accurately classify passengers based on their likelihood of survival.
