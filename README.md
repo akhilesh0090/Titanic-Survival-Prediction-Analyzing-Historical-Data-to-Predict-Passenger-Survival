@@ -1,0 +1,2 @@
+# Titanic-Survival-Prediction-Analyzing-Historical-Data-to-Predict-Passenger-Survival
+Using ML to analyze passenger data from the Titanic disaster. we predicted survival of people based on various feature. we conducted data visualization, EDA, Feature Engineering and Label Encoding. Logistic Regression and Random Forest Classifier models were used then cross validation and hyperparameter tuning were used for optimization.
